@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Challenge 1</title>
+</head>
+<body>
+    <script>
+         const urlBacon = "https://jsonplaceholder.typicode.com/todos";
+        $(document).ready(function() {
+            $.ajax({
+                    method: "GET",
+                    url: urlBacon,
+                    dataType: "json"
+                })
+                .done(function(data) {
+                    console.log(data);
+                })
+                .fail(function() {
+                    alert("no good");
+                });
+        });
+    </script>
+</body>
+</html>
